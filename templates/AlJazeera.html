@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    {% for article in articles %}
+        <h1><a href = "{{ article["url"] }}">{{ article["title"] }}</a></h1>
+        {{ article["publishedAt"] }} by {{ article["author"] }}
+        <br>
+        <h2>{{ article ["description"] }}</h2>
+        <br>
+        <a href = "{{ article["url"] }}"><img src="{{ article["urlToImage"] }}" style="width:620px;height:350px;"></a>
+        <br>
+    {% endfor %}
+  </body>
+</html>
+
+<!-- 
+    "author":"Shafik Mandhai",
+    "title":"Cambridge slammed for 'censoring' Palestine BDS event",
+    "description":"Activists condemn university's alleged threat to stop event unless Palestinian academic chairing it was removed.",
+    "url":"http://www.aljazeera.com/news/2017/11/cambridge-slammed-censoring-palestine-bds-event-171111144746630.html",
+    "urlToImage":"http://www.aljazeera.com/mritems/Images/2017/11/11/8ab68872b85248bfad69e5f8492b1b16_18.jpg",
+    "publishedAt":"2017-11-11T15:24:00Z"
+ -->

@@ -9,7 +9,7 @@ my_app = Flask(__name__)
 
 @my_app.route('/')
 def root():
-    return render_template("page.html", picture = d["hdurl"], description = d["explanation"])
+    return render_template("NASA.html", picture = d["hdurl"], description = d["explanation"])
 
 if __name__ == "__main__":
     my_app.debug = True
